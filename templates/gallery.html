@@ -25,7 +25,7 @@
     
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="card">
-                        <a href="{{ url_for('post', post_id=value.id)}}">
+                        <a href="{{ url_for('view.post', post_id=value.id)}}">
                             <img class="card-img-top img-fluid" src=" {{url_for('static', filename=('img/' + value.image))}}" alt="{{ value.description }}">
                         </a>
                         <div class="card-body">
