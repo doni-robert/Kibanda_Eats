@@ -21,7 +21,8 @@
 
         <div class="col-lg-12">
         </div>
-        {% for key, value in posts.items() %}
+        {% if posts %}
+            {% for key, value in posts.items() %}
     
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="card">
@@ -29,12 +30,21 @@
                             <img class="card-img-top img-fluid" src=" {{url_for('static', filename=('img/' + value.image))}}" alt="{{ value.description }}">
                         </a>
                         <div class="card-body">
-                            <p class="card-text">{{value.description}} for {{value.price}}</p>
+                            <p class="card-text">{{value.description}} for {{value.price}}.
+                                <br>Found in {{value.location}}
+                            </p>
                         </div>
                     </div>
                 </div>           
                                 
-        {% endfor %}
+            {% endfor %}
+        {% else %}
+        <h3>You have no posts. 
+            Click here to add </h3>
+        <br>
+        <a class="btn btn-outline-primary" id="post" href="/post">Add a Post</a>
+        {% endif%}
     </div>
 </div>
+
 {% endblock %}

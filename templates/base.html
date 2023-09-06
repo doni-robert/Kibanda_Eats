@@ -39,10 +39,25 @@
       </button>
       <div class="collapse navbar-collapse" id="navbar">
         <div class="navbar-nav">
-          
-          <a class="nav-item nav-link" id="home" href="/">Home</a>       
-          <a class="nav-item nav-link" id="login" href="/login">Login</a>
-          <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
+         
+          <a class="nav-item nav-link" id="home" href="/">Home</a>  
+          {% if current_user.is_authenticated %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                User {{ current_user.username | capitalize }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/post">Add Post</a>
+                <a class="dropdown-item" href="/history">History</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/logout">Log Out</a>
+            </div>
+          </li>
+          {% else %}
+            <a class="nav-item nav-link" id="login" href="/login">Login</a>
+            <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
+          {% endif %}
           
         </div>
       </div>

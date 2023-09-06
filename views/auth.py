@@ -82,7 +82,7 @@ def login():
             if user.check_password(password):
                 flash('Logged in successfully!', category='success')
                 login_user(user, remember=True)
-                return redirect(url_for('view.add_post', cache_id=uuid4()))
+                return redirect(url_for('gallery'))
             else:
                 flash('Incorrect password, try again.', category='error')
         else:
