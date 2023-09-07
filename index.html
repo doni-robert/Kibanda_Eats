@@ -13,10 +13,11 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css">
     <title>Kibanda Eats</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top navbar-custom">
         <a class="navbar-brand">
           <img src="static/Logo2.png" width="100" height="30" alt="Logo">
         </a>
@@ -31,70 +32,102 @@
         <div class="collapse navbar-collapse" id="navbar">
           <div class="navbar-nav">
             
-            <a class="nav-item nav-link" id="Intro" href="/">Intro</a>       
-            <a class="nav-item nav-link" id="Feature" href="/feature">Feature</a>
-            <a class="nav-item nav-link" id="About" href="/about">About</a>
+            <a class="nav-item nav-link" id="Intro" href="#intro">Intro</a>       
+            <a class="nav-item nav-link" id="Feature" href="#features">Features</a>
+            <a class="nav-item nav-link" id="About" href="#about">About</a>
             
           </div>
         </div>
         
-      </nav>
-
-      <div>
-        <img src="static/landing.webp">
-        <p>
-            Kibanda Eats - Discover local eateries for delicious and affordable foods
-        </p>
-        <a href="" target="_blank">
-            <button> Check us out</button>
-        </a>
-      </div>
-      <br>
-      <br>
-
-      <div>
-        <img src="static/Kibanda Eats signup.png" width="50%" height="75%">
-        <p>
-            <title>
-                Sign Up
-            </title>
+    </nav>
+    <section class="section" id="intro">
+      <div class="blank-space"></div>
+        <div class="image_container1">
+          <h2>Kibanda Eats</h2>
+          <a href="youtube.com" class="main-button"> Visit</a>
+          <br>  
+          <h3>
+              Discover local eateries for delicious and affordable foods
+          </h3>
+          <img src="static/landing.webp">
+        </div>
+    </section>
+      
+    <section id="features">
+      <div class="blank-space"></div>
+      
+        <div class="image_container1">
+            
+            <h4>Gallery view</h4>      
             <p>
-                The app has the ability to accept new users through the sign up page. All you need is an email, 
-                username and password. After that, you can login and add a post
+              Embark on a tantalizing journey through the culinary world, all with a simple touch.
+              Dive into a treasure trove of delectable posts shared by fellow food enthusiasts, 
+              uncovering new gems with every scroll. Our intuitive search feature empowers you to easily 
+              zero in on your cravings, ensuring your culinary exploration is a breeze.
             </p>
-        </p>
-      </div>
-      <br>
-      <br>
+            <img src="static/gallery2.png">
+        </div>      
+        <div class="blank-space"></div>
+        <div class="image_container1">
+          <h4> Easy Sign Up</h4> 
+          <p>
+            Our app's sign-up feature is your gateway become a valued Kibanda Eats contributor. With just a few clicks, 
+            you unlock a personalized experience tailored to your preferences and needs. We've made the process 
+            seamlsess, ensuring your data is safeguarded every step of the way. Don't miss out on the opportunity 
+            to be part of something amazing—sign up today and embark on a journey of discovery, connection, and 
+            endless potential.
+          </p>
+          <img src="static/Kibanda Eats signup.png" >
+        
+        </div>
+        <div class="blank-space"></div>
+        <div class="image_container1">
+          <h4>Add Post</h4> 
+          <p>
+            Our app's "Add Post" feature empowers you to share your culinary discovery with the world. With just a 
+            few clicks, you can share details of newly discovered eateries and the foods on offer. Leaving a 
+            memorable comment makes all the difference in expressing the foods delight. Join us in shaping 
+            the narrative of local eateries and leave your mark on the digital landscape.
+          </p>
+          <img src="static/newpost.png" >
+        </div>
+      
+    </section>
+    <section id="about">
+      <div class="blank-space"></div>
+        <div class="image_container2">
+          <h4>About</h4>
+          <p>
+            Kibanda Eats was inspired by the tough economic times and an ever-increasing need for affordable 
+            sustenance. It all began with a humble desire to connect people through a shared love for food and 
+            a search for wallet-friendly dining options.
+            As I walked through the bustling streets of my hometown, I couldn't help but notice the resilient spirit of 
+            local eateries. They served mouthwatering dishes crafted with passion and care, often at prices that didn't 
+            break the bank. It was a testament to the unwavering determination of communities to provide for one another 
+            during challenging times.
+            <br>
+            Then why not create an app that allowed people to share photos of these delectable local dishes, 
+            along with the locations of these hidden gems, and their affordble prices. I wanted to celebrate the 
+            heart and soul of these small businesses and help individuals discover affordable, delicious meals 
+            nearby.
+            <br>
+            And so, Kibanda Eats was born - a platform that not only lets users tantalize their taste buds 
+            through mouthwatering food photos but also supports local economies by connecting patrons to these 
+            treasured establishments. It's a testament to the resilience of communities and a celebration of the 
+            joy that can be found in a shared meal, even in the toughest of times.
+          </p>
+          <p>Done by Robert Ndung'u
+            <a href="https://github.com/doni-robert/"> Follow him on Github </a></p>
+          <p>Kibanda Eats repository 
+              <a href="https://github.com/doni-robert/Kibanda_Eats/"> on Github </a></p>
+          
+        </div>
 
-      <div>
-        <img src="static/add_post.png" width="50%" height="75%">
-        <p>
-            <title>
-                Add Post
-            </title>
-            <p>
-                A user can add a post through simple steps. Input the description of the meal, its price, 
-                location where the food can be found, a comment on the food and finally upload of the photo
-            </p>
-        </p>
-      </div>
 
-      <br>
-      <br>
+    </section>
 
-      <div>
-        <img src="static/gallery.png" width="50%" height="75%">
-        <p>
-            <title>
-                Gallery
-            </title>
-            <p>
-                Even without logging in, anyon can use the app by viewing its gallery of images. A search feature 
-                is availabe where one can search by either location or price 
-            </p>
-        </p>
-      </div>
+      
+        
     
 </body>
 </html>

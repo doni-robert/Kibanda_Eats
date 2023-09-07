@@ -3,12 +3,11 @@
 {% block content %}
 
 <div>
-    <form method="POST" action="{{ url_for('search')}}" class="d-flex">
-        
+    <form method="POST" action="{{ url_for('search_location')}}" class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search by location" aria-label="Search" name="location">
         <button class="btn btn-outline-primary" type="submit">Search</button>
-        <hr>
-        <hr>
+    </form>
+    <form method="POST" action="{{ url_for('search_price')}}" class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search by price" aria-label="Search" name="price">
         <button class="btn btn-outline-primary" type="submit">Search</button>
     </form>
