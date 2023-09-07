@@ -1,6 +1,9 @@
-{% extends "base.html" %} {% block title %}Images{% endblock %}
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
 {% block content %}
-<img src=" {{url_for('static', filename=('img/' + file.image))}}">
+<div>
+    <img src=" {{url_for('static', filename=('img/' + file.image))}}"  width="50%" height="50%" >
+</div>
 <div>
     <p>
         Description: {{ file.description}}
@@ -8,6 +11,8 @@
         Price: {{ file.price}}
         <br>
         Comment: {{ file.comment}}
+        <br>
+        Location: {{ file.location }}
     </p>
 </div>
 {% endblock %}

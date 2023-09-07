@@ -37,14 +37,25 @@ def gallery():
     
     return render_template("gallery.html", posts=posts)
 
-@app.route('/search', methods=["POST"])
-def search():
+@app.route('/price', methods=["POST"])
+def search_price():
     """Searches based on price"""
     price = request.form.get('price')
     all_posts = storage.all(Post)
     post_dic = {}
     for key, value in all_posts.items():
         if value.price <= int(price):
+            post_dic[key] = value
+    return render_template("gallery.html", posts=post_dic)
+
+@app.route('/location', methods=["POST"])
+def search_location():
+    """Searches based on location"""
+    location = request.form.get('location')
+    all_posts = storage.all(Post)
+    post_dic = {}
+    for key, value in all_posts.items():
+        if location in value.location:
             post_dic[key] = value
     return render_template("gallery.html", posts=post_dic)
 
