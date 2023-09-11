@@ -10,6 +10,11 @@ from os import getenv
 import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
+from dotenv import load_dotenv
+
+''' Load environment variables from .env file '''
+load_dotenv()
+
 
 classes = {"User": User, "Post": Post}
 
