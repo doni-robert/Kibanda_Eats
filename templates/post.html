@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block title %}Add Post{% endblock %}
 {% block content %}
-<form method="POST" enctype="multipart/form-data">
+  <form method="POST" enctype="multipart/form-data">
     <h3 align="center">Add photo</h3>
     <div class="form-group">
       <label for="description">Description</label>
@@ -10,6 +10,7 @@
         id="description"
         name="description"
         placeholder="What was your meal"
+        required
       />
     </div>
     <div class="form-group">
@@ -20,6 +21,7 @@
           id="price"
           name="price"
           placeholder="How much was it?"
+          required
         />
       </div>
       <div class="form-group">
@@ -30,6 +32,7 @@
           id="location"
           name="location"
           placeholder="Give a detailed location where to find the food eg..Nairobi, Moi Avenue next to Jevajee Gardens"
+          required
         />
       </div>
       <div class="form-group">
@@ -40,6 +43,7 @@
           id="comment"
           name="comment"
           placeholder="Give a comment"
+          required
         />
       </div>
   
@@ -52,6 +56,7 @@
         name="photo"
         accept="image/*"
         placeholder="Upload photo"
+        required
       />
     </div>
     <br />
