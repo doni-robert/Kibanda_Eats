@@ -55,14 +55,10 @@ def search_location():
     all_posts = storage.all(Post)
     post_dic = {}
     for key, value in all_posts.items():
-        if location in value.location:
+        if location.lower() in value.location.lower():
             post_dic[key] = value
     return render_template("gallery.html", posts=post_dic)
 
-#@app.route('/main', strict_slashes=False, methods=['GET', 'POST', 'PUT', 'DELETE'])
-#def main():
-#   user_id = current_user.get_id()
-#  return render_template('main.html', userId=user_id, cache_id=uuid4())
 
 @app.teardown_appcontext
 def close(error):

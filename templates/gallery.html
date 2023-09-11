@@ -25,7 +25,7 @@
     
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="card">
-                        <a href="{{ url_for('view.post', post_id=value.id)}}">
+                        <a href="{{ url_for('view.post', from_delete=from_delete, from_update=from_update, post_id=value.id)}}">
                             <img class="card-img-top img-fluid" src=" {{url_for('static', filename=('img/' + value.image))}}" alt="{{ value.description }}">
                         </a>
                         <div class="card-body">
@@ -38,7 +38,7 @@
                                 
             {% endfor %}
         {% else %}
-        <h3>You have no posts. 
+        <h3>No post available 
             Click here to add </h3>
         <br>
         <a class="btn btn-outline-primary" id="post" href="/post">Add a Post</a>
