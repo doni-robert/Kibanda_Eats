@@ -1,4 +1,4 @@
-Kibanda Eats
+Kibanda Eats  
 A web app for discovering local eateries for delicious and affordable foods
 
 [Visit my landing page](https://doni-robert.github.io/Kibanda_Eats/)  
