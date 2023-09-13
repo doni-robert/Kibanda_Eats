@@ -1,5 +1,7 @@
 Kibanda Eats  
-A web app for discovering local eateries for delicious and affordable foods
+A web app for discovering local eateries for delicious and affordable foods  
+
+![Screenshot](https://github.com/doni-robert/Kibanda_Eats/blob/main/static/gallery2.png)
 
 [Visit my landing page](https://doni-robert.github.io/Kibanda_Eats/)  
 [Visit my web page](http://18.209.152.125/)  
