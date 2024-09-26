@@ -22,7 +22,7 @@
                     Location: {{ file.location }}
                 </p>
                 <p>
-                    Uploaded by: {{ file.user.username }}
+                    Uploaded by: {{ file.user.username | capitalize }}
                 </p>
                 {% if current_user.id == file.user_id %}
                 <div class="mt-3">

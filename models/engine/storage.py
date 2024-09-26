@@ -89,8 +89,6 @@ class Storage:
 
     def delete(self, cls, id):
         """delete from the current database session obj if not None"""
-        #if obj is not None and not(id):
-        #   self.__session.delete(obj)
         if cls in classes.values():
             self.__session.query(cls).filter_by(id=id).delete()
 
